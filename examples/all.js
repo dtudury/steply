@@ -6,11 +6,8 @@ Stepply(2).log("initial value")
 
 
 function pauser(duration) {
-    var stepPauser = new Stepply.StepPauser();
-    console.log('pause for:', duration, 'second' + (duration === 1 ? '' : 's'));
-    setTimeout(function() {
-        console.log('pause completed...');
-        stepPauser.resume(Math.random());
-    }, 1000 * duration);
-    return stepPauser;
+    return Stepply('pause for:', duration, 'second' + (duration === 1 ? '' : 's')).log()
+        .wait(duration * 1000)
+        .args('pause complete').log()
+        .fun(Math.random).exec();
 }
