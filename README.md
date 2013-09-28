@@ -4,6 +4,8 @@
 
 this is ***very much*** a 0.x project. I write examples instead of tests, I document features I'm still in the process of implementing (and really, I only document at all as a brain-storming exercise), I knowingly push broken code, and I change my mind about what this project even is for daily... when that's no longer true I'll replace this terrifying paragraph with some salesy piece about how much better food tastes with this module in your project (and I'll move to 1.x)
 
+[![Build Status](https://travis-ci.org/dtudury/steply.png)](https://travis-ci.org/dtudury/steply)
+
 ##Installation
 
     $ npm install steply

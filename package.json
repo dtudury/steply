@@ -1,10 +1,10 @@
 {
   "name": "steply",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "asynchronous promise-like function sequencing for dummies (me)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",
