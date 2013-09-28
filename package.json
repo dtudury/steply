@@ -1,6 +1,6 @@
 {
   "name": "steply",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "asynchronous functional promises futures whatever",
   "main": "index.js",
   "scripts": {

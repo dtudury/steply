@@ -13,6 +13,7 @@ this is ***very much*** a 0.x project. I write examples instead of tests, I docu
 Promises are awesome, I love promises... but I'm not an academic and *sometimes* I'd find myself having naive thoughts like "I **just** want to call a() and then when that's done, b()"...  or I'd find myself reading wikipedia pages on monads when all I really wanted was to call the next custom function with values calculated in the current custom function.
 
 ~~Basically~~ when the **Stepper** executes a method it returns its self.  every method called on **Stepper** is used to create a list of functions to be sequenced.  there are 5 basic **Stepper** methods:
+
 - set the next function
 - set the next arguments
 - set the next target (the `this` the next function will use)
@@ -29,16 +30,6 @@ Once the Stepper is chain called to setup the **steps** the stack is executed
 - if there is a normal result, it's pushed onto the arguments stack, the next **Step** is run
 - if the result is a **StepPauser** then we're dealing with an asynchronous method and we setup a *continue* method on the returned **StepPauser**
 - when the async method is complete, it should call the *continue* method with any results. those results are appended to the arguments stack and the next **Step** is run
-
-##TODO
-- [ ] make `then` the default method
-- [ ] fixup `then` to be less weird (or at least be normal for normal cases)
-- [ ] tests for core methods
-- [ ] tests for combination methods
-- [ ] break out documentation for *what this actually does*
-- [ ] break out documentation for *how to add methods*
-- [ ] qualify the *for dummies* part...
-- [ ] document methods more clearly in individual documents
 
 
 ##Core Methods
