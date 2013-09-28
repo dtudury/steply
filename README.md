@@ -37,14 +37,16 @@ Once the Stepper is chain called to setup the **steps** the stack is executed
 
 
 
-###execute, exec
+###execute, exec, x
 
 calling `exec()` will push any targets, functions, and arguments to their respective stacks (hopefully that will make sense later)
 
+can also be passed a function or an array to be used for the current step
 
 
 
-###setFunction, fun
+
+###setFunction, fun, f
 
 sets the function to be pushed onto the list of steps
 ```js
@@ -59,7 +61,7 @@ function bar() {...}
 
 
 
-###setArguments, args
+###setArguments, args, a
 
 for when functions alone won't do it
 ```js
@@ -89,7 +91,7 @@ function foo(a, b, c) {...}
 
 
 
-###setThis, obj
+###setThis, obj, t
 
 set the target any functions will refer to as `this`
 
@@ -110,7 +112,7 @@ function foo() {
 
 
 
-###setErrorHandler, err
+###setErrorHandler, err, e
 
 set function for handling any thrown errors
 

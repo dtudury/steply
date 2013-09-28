@@ -5,7 +5,9 @@ Stepply.Stepper()
     .setFunction(sum).execute()
     .setFunction(log).execute()
     .setArguments(2, 3, 4).setFunction(log).execute()
-    .setArguments(1).setFunction(pauser).execute();
+    .setArguments(1).setFunction(pauser).execute()
+    .execute([0.5])
+    .execute(log, [1, 2, 3]);
 
 
 function log() {
