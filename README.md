@@ -1,10 +1,45 @@
 #Steply
 
-asynchronous functional promises futures whatever (not sure yet)
+*asynchronous promise-like function sequencing for dummies*
+
+this is ***very much*** a 0.x project. I write examples instead of tests, I document features I'm still in the process of implementing (and really, I only document at all as a brain-storming exercise), I knowingly push broken code, and I change my mind about what this project even is for daily... when that's no longer true I'll replace this terrifying paragraph with some salesy piece about how much better food tastes with this module in your project (and I'll move to 1.x)
 
 ##Installation
 
     $ npm install steply
+
+##Overview
+
+Promises are awesome, I love promises... but I'm not an academic and *sometimes* I'd find myself having naive thoughts like "I **just** want to call a() and then when that's done, b()"...  or I'd find myself reading wikipedia pages on monads when all I really wanted was to call the next custom function with values calculated in the current custom function.
+
+~~Basically~~ when the **Stepper** executes a method it returns its self.  every method called on **Stepper** is used to create a list of functions to be sequenced.  there are 5 basic **Stepper** methods:
+- set the next function
+- set the next arguments
+- set the next target (the `this` the next function will use)
+- push the current-next function+arguments+target to the stack of **steps**
+- set and push an error handler to the stack
+- The additional methods are *combination* methods which are attempts to expressively solve common use cases
+
+Once the Stepper is chain called to setup the **steps** the stack is executed
+
+- stacks are created for functions, arguments, and targets
+- if a **Step** has a function, arguments, or target defined it is pushed onto its respective stack
+- the top function, arguments, and target are combined and executed
+- if there is no result, the next **Step** is run
+- if there is a normal result, it's pushed onto the arguments stack, the next **Step** is run
+- if the result is a **StepPauser** then we're dealing with an asynchronous method and we setup a *continue* method on the returned **StepPauser**
+- when the async method is complete, it should call the *continue* method with any results. those results are appended to the arguments stack and the next **Step** is run
+
+##TODO
+- [ ] make `then` the default method
+- [ ] fixup `then` to be less weird (or at least be normal for normal cases)
+- [ ] tests for core methods
+- [ ] tests for combination methods
+- [ ] break out documentation for *what this actually does*
+- [ ] break out documentation for *how to add methods*
+- [ ] qualify the *for dummies* part...
+- [ ] document methods more clearly in individual documents
+
 
 ##Core Methods
 
