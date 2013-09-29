@@ -1,7 +1,7 @@
 {
   "name": "steply",
-  "version": "0.5.2",
-  "description": "asynchronous promise-like function sequencing for dummies (me)",
+  "version": "0.5.4",
+  "description": "asynchronous promise-like function sequencing for dummies (like me)",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha"
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "mocha": "~1.13.0",
-    "chai": "~1.8.0"
+    "chai": "~1.8.0",
+    "sinon": "~1.7.3"
   }
 }
