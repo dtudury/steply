@@ -1,6 +1,6 @@
-var Stepply = require('../index');
+var Steply = require('../index');
 
-Stepply("a").log("log1")
+Steply("a").log("log1")
     .args("b").fun(thrower).exec().log("log2")
     .args("c").log("log3")
     .args("d").log("log4")

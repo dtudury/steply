@@ -1,7 +1,7 @@
-var Stepply = require('../index');
+var Steply = require('../index');
 var arrayify = require('../lib/utils').arrayify;
 
-Stepply(1, 2, 3)
+Steply(1, 2, 3)
     .log("log1")
     .then(5, myLog, 7)
     .log("log2").then(6, 7, 8)

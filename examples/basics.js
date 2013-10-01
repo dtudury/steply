@@ -1,6 +1,6 @@
-var Stepply = require('../index');
+var Steply = require('../index');
 
-Stepply.Stepper()
+Steply.Stepper()
     .setArguments(1, 2, 3).setFunction(log).execute()
     .setFunction(sum).execute()
     .setFunction(log).execute()
@@ -23,7 +23,7 @@ function sum () {
 }
 
 function pauser(duration) {
-    var stepPauser = new Stepply.StepPauser();
+    var stepPauser = new Steply.StepPauser();
     console.log('pause for:', duration, 'second', duration === 1 ? '' : 's');
     setTimeout(function() {
         console.log('pause completed...');

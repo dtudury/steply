@@ -10,6 +10,10 @@ this is ***very much*** a 0.x project. I write examples instead of tests, I docu
 
     $ npm install steply
 
+##Documentation
+
+[API is roughly 20% done](//github.com/dtudury/steply/wiki/Steply) and the [code](//github.com/dtudury/steply/tree/master/lib) is **fairly** legible (says the dev who wrote it...;)
+
 ##Overview
 
 Promises are awesome, I love promises... but I'm not an academic and *sometimes* I'd find myself having naive thoughts like "I **just** want to call a() and then when that's done, b()"...  or I'd find myself reading wikipedia pages on monads when all I really wanted was to call the next custom function with values calculated in the current custom function.
