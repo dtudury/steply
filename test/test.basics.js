@@ -9,7 +9,7 @@ var should = require('chai').should();
 var Steply = require('../index.js');
 
 describe('Stepper', function () {
-    describe('#execute()', function () {
+    describe('basics', function () {
         it('should override arguments', function () {
             Steply(5).setArguments(6).f(function (a) {
                 a.should.equal(6);
