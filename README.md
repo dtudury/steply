@@ -1,6 +1,6 @@
 #Steply
 
-***.all is broken right now*** and rather than fix it (or even checkin a test that proves it) I'm editing the readme... momma's don't let your kids grow up to be like me
+***.all is broken right now*** and rather than fix it I'm editing the readme... momma's don't let your babies grow up to be cowboy-developers
 
 *asynchronous promise-like function sequencing for dummies* (like me)
 

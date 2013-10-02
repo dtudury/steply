@@ -36,10 +36,9 @@ describe('Stepper', function () {
                     return Steply(8).wait(200).x(function(a){return a;});
                 })
                 .f(function (a, b, c) {
-//                    console.log(a);
-//                    a.should.deep.equal([4]);
-//                    b.should.deep.equal([6]);
-//                    c.should.deep.equal([8]);
+                    a.should.deep.equal([4]);
+                    b.should.deep.equal([6]);
+                    c.should.deep.equal([8]);
                     done();
                 }).x();
         });
