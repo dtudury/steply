@@ -29,7 +29,7 @@ describe('Stepper', function () {
         it('should resolve all functions and pass results', function (done) {
             Steply()
                 .all(function () {
-                    return Steply(4).wait(200).f(function(a){console.log('asdf', a); return a;}).x();
+                    return Steply(4).wait(200).f(function(a){return a;}).x();
                 }, function () {
                     return Steply(6).wait(200).x(function(a){return a;});
                 }, function () {
